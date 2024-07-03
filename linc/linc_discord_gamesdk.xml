@@ -1,0 +1,37 @@
+<xml>
+	<files id="haxe">
+		<compilerflag value="-I${LINC_DISCORD_GAMESDK_PATH}/linc/"/>
+		<compilerflag value="-I${LINC_DISCORD_GAMESDK_PATH}/project/src/"/>
+	
+		<file name="${LINC_DISCORD_GAMESDK_PATH}/linc/linc_discord_gamesdk.cpp"/>
+
+		<file name="${LINC_DISCORD_GAMESDK_PATH}/project/src/achievement_manager.cpp"/>
+		<file name="${LINC_DISCORD_GAMESDK_PATH}/project/src/activity_manager.cpp"/>
+		<file name="${LINC_DISCORD_GAMESDK_PATH}/project/src/application_manager.cpp"/>
+		<file name="${LINC_DISCORD_GAMESDK_PATH}/project/src/core.cpp"/>
+		<file name="${LINC_DISCORD_GAMESDK_PATH}/project/src/image_manager.cpp"/>
+		<file name="${LINC_DISCORD_GAMESDK_PATH}/project/src/lobby_manager.cpp"/>
+		<file name="${LINC_DISCORD_GAMESDK_PATH}/project/src/network_manager.cpp"/>
+		<file name="${LINC_DISCORD_GAMESDK_PATH}/project/src/overlay_manager.cpp"/>
+		<file name="${LINC_DISCORD_GAMESDK_PATH}/project/src/relationship_manager.cpp"/>
+		<file name="${LINC_DISCORD_GAMESDK_PATH}/project/src/storage_manager.cpp"/>
+		<file name="${LINC_DISCORD_GAMESDK_PATH}/project/src/store_manager.cpp"/>
+		<file name="${LINC_DISCORD_GAMESDK_PATH}/project/src/user_manager.cpp"/>
+		<file name="${LINC_DISCORD_GAMESDK_PATH}/project/src/voice_manager.cpp"/>
+		<file name="${LINC_DISCORD_GAMESDK_PATH}/project/src/types.cpp"/>
+	</files>
+
+	<target id="haxe">
+		<section if="windows">
+			<section if="HXCPP_M32">
+				<libpathflag value="-L{LINC_DISCORD_GAMESDK_PATH}/project/lib/x86"/>
+				<lib name="${LINC_DISCORD_GAMESDK_PATH}/project/lib/x86/discord_game_sdk.dll.lib"/>
+			</section>
+
+			<section if="HXCPP_M64">
+				<libpathflag value="-L{LINC_DISCORD_GAMESDK_PATH}/project/lib/x86_64"/>
+				<lib name="${LINC_DISCORD_GAMESDK_PATH}/project/lib/x86_64/discord_game_sdk.dll.lib"/>
+			</section>
+		</section>
+	</target>
+</xml>
