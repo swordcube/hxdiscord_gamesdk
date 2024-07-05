@@ -2,10 +2,14 @@ import haxe.Int64Helper;
 import discord.GameSDK;
 
 function main() {
-	trace(GameSDK.create('1257306499672182844'));
+	var result = GameSDK.create('1257932902268928020');
+	trace(result);
+	if (result != Ok) return;
 
 	GameSDK.updateActivity({
-		details: 'testing',
+		assets: {
+			largeImage: 'icon'
+		},
 		timestamps: {
 			start: Int64Helper.fromFloat(Date.now().getTime())
 		}

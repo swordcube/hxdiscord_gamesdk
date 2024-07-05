@@ -1,0 +1,10 @@
+{
+	"name": "hxdiscord_gamesdk",
+	"license": "MIT",
+	"releasenote": "first release",
+	"contributors": ["ahika462"],
+	"version": "0.1.0",
+	"description": "Simple Haxe wrapper of Discord GameSDK",
+	"tags": ["discord", "rpc", "gamesdk", "cpp", "hl"],
+	"url": "https://github.com/ahika462/hxdiscord_gamesdk"
+}

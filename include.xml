@@ -3,6 +3,6 @@
 		<set name="DLL_FOLDER" value="x86_64"/>
 		<set name="DLL_FOLDER" value="x86" if="32bit"/>
 
-		<assets path="project/lib/${DLL_FOLDER}/discord_game_sdk.dll" rename="discord_game_sdk.dll"/>
+		<dependency path="project/lib/${DLL_FOLDER}/discord_game_sdk.dll" rename="discord_game_sdk.dll"/>
 	</section>
 </extension>

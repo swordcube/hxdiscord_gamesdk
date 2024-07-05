@@ -2,17 +2,15 @@
 
 #include <stdint.h>
 
-using namespace discord;
+using result = int;
+namespace discord_core {
+	extern result create(int64_t clientId, uint64_t flags);
 
-namespace linc {
-	namespace discord {
-		using result = int;
+	extern result runCallbacks();
+}
 
-		extern result create(int64_t clientId, uint64_t flags);
-
-		extern result runCallbacks();
-
-		extern result registerCommand(const char* command);
+namespace discord_activity {
+	extern result registerCommand(const char* command);
 
 		extern result registerSteam(uint32_t steamId);
 
@@ -23,5 +21,4 @@ namespace linc {
 		const char* party_id, int32_t party_size_currentSize, int32_t party_size_maxSize, int party_privacy,
 		const char* secrets_match, const char* secrets_join, const char* secrets_spectate,
 		bool instance, uint32_t supportedPlatforms);
-	}
 }

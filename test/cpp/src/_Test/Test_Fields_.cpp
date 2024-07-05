@@ -42,19 +42,23 @@ bool Test_Fields__obj::_hx_isInstanceOf(int inClassId) {
 
 void Test_Fields__obj::main(){
             	HX_STACKFRAME(&_hx_pos_ac00761f25561774_4_main)
-HXLINE(   5)		 ::Dynamic _hx_tmp = ::haxe::Log_obj::trace;
-HXDLIN(   5)		int _hx_tmp1 = ::discord::GameSDK_obj::create(HX_("1257306499672182844",80,fa,28,18),null());
-HXDLIN(   5)		_hx_tmp(_hx_tmp1,::hx::SourceInfo(HX_("Test.hx",8c,21,fb,8a),5,HX_("_Test.Test_Fields_",d6,31,df,71),HX_("main",39,38,56,48)));
-HXLINE(   7)		::discord::GameSDK_obj::updateActivity( ::Dynamic(::hx::Anon_obj::Create(2)
-            			->setFixed(0,HX_("details",c2,dc,56,ab),HX_("testing",d0,c3,d6,bd))
+HXLINE(   5)		int result = ::discord::GameSDK_obj::create(HX_("1257932902268928020",1d,23,e4,7c),null());
+HXLINE(   6)		::haxe::Log_obj::trace(result,::hx::SourceInfo(HX_("Test.hx",8c,21,fb,8a),6,HX_("_Test.Test_Fields_",d6,31,df,71),HX_("main",39,38,56,48)));
+HXLINE(   7)		if ((result != 0)) {
+HXLINE(   7)			return;
+            		}
+HXLINE(  14)		Float _hx_tmp = ::Date_obj::now()->getTime();
+HXLINE(   9)		::discord::GameSDK_obj::updateActivity( ::Dynamic(::hx::Anon_obj::Create(2)
+            			->setFixed(0,HX_("assets",83,48,03,4c), ::Dynamic(::hx::Anon_obj::Create(1)
+            				->setFixed(0,HX_("largeImage",a0,f5,1e,f3),HX_("icon",79,e7,b2,45))))
             			->setFixed(1,HX_("timestamps",dd,66,2b,6f), ::Dynamic(::hx::Anon_obj::Create(1)
-            				->setFixed(0,HX_("start",62,74,0b,84),::haxe::Int64Helper_obj::fromFloat(::Date_obj::now()->getTime()))))));
-HXLINE(  14)		while(true){
-HXLINE(  15)			int result = ::discord::GameSDK_obj::runCallbacks();
-HXLINE(  16)			if ((result != 0)) {
-HXLINE(  16)				::haxe::Log_obj::trace(result,::hx::SourceInfo(HX_("Test.hx",8c,21,fb,8a),16,HX_("_Test.Test_Fields_",d6,31,df,71),HX_("main",39,38,56,48)));
+            				->setFixed(0,HX_("start",62,74,0b,84),::haxe::Int64Helper_obj::fromFloat(_hx_tmp))))));
+HXLINE(  18)		while(true){
+HXLINE(  19)			int result1 = ::discord::GameSDK_obj::runCallbacks();
+HXLINE(  20)			if ((result1 != 0)) {
+HXLINE(  20)				::haxe::Log_obj::trace(result1,::hx::SourceInfo(HX_("Test.hx",8c,21,fb,8a),20,HX_("_Test.Test_Fields_",d6,31,df,71),HX_("main",39,38,56,48)));
             			}
-HXLINE(  18)			::Sys_obj::sleep(((Float)0.4));
+HXLINE(  22)			::Sys_obj::sleep(((Float)0.4));
             		}
             	}
 

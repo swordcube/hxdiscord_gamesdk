@@ -46,7 +46,7 @@ bool GameSDK_obj::_hx_isInstanceOf(int inClassId) {
 int GameSDK_obj::create(::String clientId,::hx::Null< int >  __o_flags){
             		int flags = __o_flags.Default(1);
             	HX_STACKFRAME(&_hx_pos_313dfd27377afb93_34_create)
-HXDLIN(  34)		return linc::discord::create(::haxe::Int64Helper_obj::parseString(clientId),( (::cpp::Int64)(flags) ));
+HXDLIN(  34)		return discord_core::create(::haxe::Int64Helper_obj::parseString(clientId),( (::cpp::Int64)(flags) ));
             	}
 
 
@@ -54,7 +54,7 @@ STATIC_HX_DEFINE_DYNAMIC_FUNC2(GameSDK_obj,create,return )
 
 int GameSDK_obj::runCallbacks(){
             	HX_STACKFRAME(&_hx_pos_313dfd27377afb93_38_runCallbacks)
-HXDLIN(  38)		return linc::discord::runCallbacks();
+HXDLIN(  38)		return discord_core::runCallbacks();
             	}
 
 
@@ -70,7 +70,7 @@ HXDLIN(  42)			_hx_tmp = tmp;
             		else {
 HXDLIN(  42)			_hx_tmp = HX_("",00,00,00,00);
             		}
-HXDLIN(  42)		return linc::discord::registerCommand(::discord::_GameSDK::NativeString_Impl__obj::_new(_hx_tmp));
+HXDLIN(  42)		return discord_activity::registerCommand(::discord::_GameSDK::NativeString_Impl__obj::_new(_hx_tmp));
             	}
 
 
@@ -78,7 +78,7 @@ STATIC_HX_DEFINE_DYNAMIC_FUNC1(GameSDK_obj,registerCommand,return )
 
 int GameSDK_obj::registerSteam(int steamId){
             	HX_STACKFRAME(&_hx_pos_313dfd27377afb93_46_registerSteam)
-HXDLIN(  46)		return linc::discord::registerSteam(( (unsigned int)(steamId) ));
+HXDLIN(  46)		return discord_activity::registerSteam(( (unsigned int)(steamId) ));
             	}
 
 
@@ -362,7 +362,7 @@ HXLINE(  56)			_hx_tmp30 = ( (int)(tmp34) );
             		else {
 HXLINE(  56)			_hx_tmp30 = 0;
             		}
-HXLINE(  50)		linc::discord::updateActivity(_hx_tmp,_hx_tmp1,_hx_tmp3,_hx_tmp5,_hx_tmp7,_hx_tmp8,_hx_tmp9,_hx_tmp11,_hx_tmp13,_hx_tmp15,_hx_tmp17,_hx_tmp19,_hx_tmp20,_hx_tmp21,_hx_tmp22,_hx_tmp24,_hx_tmp26,_hx_tmp28,_hx_tmp29,( (unsigned int)(_hx_tmp30) ));
+HXLINE(  50)		discord_activity::updateActivity(_hx_tmp,_hx_tmp1,_hx_tmp3,_hx_tmp5,_hx_tmp7,_hx_tmp8,_hx_tmp9,_hx_tmp11,_hx_tmp13,_hx_tmp15,_hx_tmp17,_hx_tmp19,_hx_tmp20,_hx_tmp21,_hx_tmp22,_hx_tmp24,_hx_tmp26,_hx_tmp28,_hx_tmp29,( (unsigned int)(_hx_tmp30) ));
             	}
 
 

@@ -176,20 +176,21 @@ typedef Activity = {
 @:build(linc.Linc.touch())
 @:build(linc.Linc.xml('discord_gamesdk'))
 @:include('linc_discord_gamesdk.h')
+@:native('discord_gamesdk')
 private extern class CppGameSDK {
-	@:native('linc::discord::create')
+	@:native('discord_core::create')
 	public static function create(clientId:Int64, flags:Int64):Result;
 
-	@:native('linc::discord::runCallbacks')
+	@:native('discord_core::runCallbacks')
 	public static function runCallbacks():Result;
 
-	@:native('linc::discord::registerCommand')
+	@:native('discord_activity::registerCommand')
 	public static function registerCommand(command:ConstCharStar):Result;
 
-	@:native('linc::discord::registerSteam')
+	@:native('discord_activity::registerSteam')
 	public static function registerSteam(steamId:UInt32):Result;
 
-	@:native('linc::discord::updateActivity')
+	@:native('discord_activity::updateActivity')
 	public static function updateActivity(type:Int, applicationId:Int64,
 	name:ConstCharStar, state:ConstCharStar, details:ConstCharStar,
 	timestamps_start:Int64, timestamps_end:Int64,
