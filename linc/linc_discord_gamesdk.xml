@@ -33,5 +33,11 @@
 				<lib name="${LINC_DISCORD_GAMESDK_PATH}/project/lib/x86_64/discord_game_sdk.dll.lib"/>
 			</section>
 		</section>
+		<section if="linux">
+			<section if="HXCPP_M64">
+				<libpathflag value="-L{LINC_DISCORD_GAMESDK_PATH}/project/lib/x86_64"/>
+				<lib name="${LINC_DISCORD_GAMESDK_PATH}/project/lib/x86_64/discord_game_sdk.so"/>
+			</section>
+		</section>
 	</target>
 </xml>

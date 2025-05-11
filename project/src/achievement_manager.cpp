@@ -33,7 +33,7 @@ IDiscordAchievementEvents AchievementManager::events_{
 };
 
 void AchievementManager::SetUserAchievement(Snowflake achievementId,
-                                            std::uint8_t percentComplete,
+                                            uint8_t percentComplete,
                                             std::function<void(Result)> callback)
 {
     static auto wrapper = [](void* callbackData, EDiscordResult result) -> void {
@@ -65,7 +65,7 @@ void AchievementManager::FetchUserAchievements(std::function<void(Result)> callb
     internal_->fetch_user_achievements(internal_, cb.release(), wrapper);
 }
 
-void AchievementManager::CountUserAchievements(std::int32_t* count)
+void AchievementManager::CountUserAchievements(int32_t* count)
 {
     if (!count) {
         return;
@@ -86,7 +86,7 @@ Result AchievementManager::GetUserAchievement(Snowflake userAchievementId,
     return static_cast<Result>(result);
 }
 
-Result AchievementManager::GetUserAchievementAt(std::int32_t index,
+Result AchievementManager::GetUserAchievementAt(int32_t index,
                                                 UserAchievement* userAchievement)
 {
     if (!userAchievement) {

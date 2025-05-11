@@ -5,6 +5,7 @@
 using result = int;
 namespace discord_core {
 	extern result create(int64_t clientId, uint64_t flags);
+	extern void shutdown();
 
 	extern result runCallbacks();
 }

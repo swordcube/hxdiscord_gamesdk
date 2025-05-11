@@ -106,42 +106,42 @@ ImageType ImageHandle::GetType() const
     return static_cast<ImageType>(internal_.type);
 }
 
-void ImageHandle::SetId(std::int64_t id)
+void ImageHandle::SetId(int64_t id)
 {
     internal_.id = id;
 }
 
-std::int64_t ImageHandle::GetId() const
+int64_t ImageHandle::GetId() const
 {
     return internal_.id;
 }
 
-void ImageHandle::SetSize(std::uint32_t size)
+void ImageHandle::SetSize(uint32_t size)
 {
     internal_.size = size;
 }
 
-std::uint32_t ImageHandle::GetSize() const
+uint32_t ImageHandle::GetSize() const
 {
     return internal_.size;
 }
 
-void ImageDimensions::SetWidth(std::uint32_t width)
+void ImageDimensions::SetWidth(uint32_t width)
 {
     internal_.width = width;
 }
 
-std::uint32_t ImageDimensions::GetWidth() const
+uint32_t ImageDimensions::GetWidth() const
 {
     return internal_.width;
 }
 
-void ImageDimensions::SetHeight(std::uint32_t height)
+void ImageDimensions::SetHeight(uint32_t height)
 {
     internal_.height = height;
 }
 
-std::uint32_t ImageDimensions::GetHeight() const
+uint32_t ImageDimensions::GetHeight() const
 {
     return internal_.height;
 }
@@ -210,22 +210,22 @@ char const* ActivityAssets::GetSmallText() const
     return internal_.small_text;
 }
 
-void PartySize::SetCurrentSize(std::int32_t currentSize)
+void PartySize::SetCurrentSize(int32_t currentSize)
 {
     internal_.current_size = currentSize;
 }
 
-std::int32_t PartySize::GetCurrentSize() const
+int32_t PartySize::GetCurrentSize() const
 {
     return internal_.current_size;
 }
 
-void PartySize::SetMaxSize(std::int32_t maxSize)
+void PartySize::SetMaxSize(int32_t maxSize)
 {
     internal_.max_size = maxSize;
 }
 
-std::int32_t PartySize::GetMaxSize() const
+int32_t PartySize::GetMaxSize() const
 {
     return internal_.max_size;
 }
@@ -304,12 +304,12 @@ ActivityType Activity::GetType() const
     return static_cast<ActivityType>(internal_.type);
 }
 
-void Activity::SetApplicationId(std::int64_t applicationId)
+void Activity::SetApplicationId(int64_t applicationId)
 {
     internal_.application_id = applicationId;
 }
 
-std::int64_t Activity::GetApplicationId() const
+int64_t Activity::GetApplicationId() const
 {
     return internal_.application_id;
 }
@@ -397,12 +397,12 @@ bool Activity::GetInstance() const
     return internal_.instance != 0;
 }
 
-void Activity::SetSupportedPlatforms(std::uint32_t supportedPlatforms)
+void Activity::SetSupportedPlatforms(uint32_t supportedPlatforms)
 {
     internal_.supported_platforms = supportedPlatforms;
 }
 
-std::uint32_t Activity::GetSupportedPlatforms() const
+uint32_t Activity::GetSupportedPlatforms() const
 {
     return internal_.supported_platforms;
 }
@@ -498,12 +498,12 @@ LobbySecret Lobby::GetSecret() const
     return internal_.secret;
 }
 
-void Lobby::SetCapacity(std::uint32_t capacity)
+void Lobby::SetCapacity(uint32_t capacity)
 {
     internal_.capacity = capacity;
 }
 
-std::uint32_t Lobby::GetCapacity() const
+uint32_t Lobby::GetCapacity() const
 {
     return internal_.capacity;
 }
@@ -518,42 +518,42 @@ bool Lobby::GetLocked() const
     return internal_.locked != 0;
 }
 
-void ImeUnderline::SetFrom(std::int32_t from)
+void ImeUnderline::SetFrom(int32_t from)
 {
     internal_.from = from;
 }
 
-std::int32_t ImeUnderline::GetFrom() const
+int32_t ImeUnderline::GetFrom() const
 {
     return internal_.from;
 }
 
-void ImeUnderline::SetTo(std::int32_t to)
+void ImeUnderline::SetTo(int32_t to)
 {
     internal_.to = to;
 }
 
-std::int32_t ImeUnderline::GetTo() const
+int32_t ImeUnderline::GetTo() const
 {
     return internal_.to;
 }
 
-void ImeUnderline::SetColor(std::uint32_t color)
+void ImeUnderline::SetColor(uint32_t color)
 {
     internal_.color = color;
 }
 
-std::uint32_t ImeUnderline::GetColor() const
+uint32_t ImeUnderline::GetColor() const
 {
     return internal_.color;
 }
 
-void ImeUnderline::SetBackgroundColor(std::uint32_t backgroundColor)
+void ImeUnderline::SetBackgroundColor(uint32_t backgroundColor)
 {
     internal_.background_color = backgroundColor;
 }
 
-std::uint32_t ImeUnderline::GetBackgroundColor() const
+uint32_t ImeUnderline::GetBackgroundColor() const
 {
     return internal_.background_color;
 }
@@ -568,42 +568,42 @@ bool ImeUnderline::GetThick() const
     return internal_.thick != 0;
 }
 
-void Rect::SetLeft(std::int32_t left)
+void Rect::SetLeft(int32_t left)
 {
     internal_.left = left;
 }
 
-std::int32_t Rect::GetLeft() const
+int32_t Rect::GetLeft() const
 {
     return internal_.left;
 }
 
-void Rect::SetTop(std::int32_t top)
+void Rect::SetTop(int32_t top)
 {
     internal_.top = top;
 }
 
-std::int32_t Rect::GetTop() const
+int32_t Rect::GetTop() const
 {
     return internal_.top;
 }
 
-void Rect::SetRight(std::int32_t right)
+void Rect::SetRight(int32_t right)
 {
     internal_.right = right;
 }
 
-std::int32_t Rect::GetRight() const
+int32_t Rect::GetRight() const
 {
     return internal_.right;
 }
 
-void Rect::SetBottom(std::int32_t bottom)
+void Rect::SetBottom(int32_t bottom)
 {
     internal_.bottom = bottom;
 }
 
-std::int32_t Rect::GetBottom() const
+int32_t Rect::GetBottom() const
 {
     return internal_.bottom;
 }
@@ -619,22 +619,22 @@ char const* FileStat::GetFilename() const
     return internal_.filename;
 }
 
-void FileStat::SetSize(std::uint64_t size)
+void FileStat::SetSize(uint64_t size)
 {
     internal_.size = size;
 }
 
-std::uint64_t FileStat::GetSize() const
+uint64_t FileStat::GetSize() const
 {
     return internal_.size;
 }
 
-void FileStat::SetLastModified(std::uint64_t lastModified)
+void FileStat::SetLastModified(uint64_t lastModified)
 {
     internal_.last_modified = lastModified;
 }
 
-std::uint64_t FileStat::GetLastModified() const
+uint64_t FileStat::GetLastModified() const
 {
     return internal_.last_modified;
 }
@@ -669,12 +669,12 @@ Snowflake Entitlement::GetSkuId() const
     return internal_.sku_id;
 }
 
-void SkuPrice::SetAmount(std::uint32_t amount)
+void SkuPrice::SetAmount(uint32_t amount)
 {
     internal_.amount = amount;
 }
 
-std::uint32_t SkuPrice::GetAmount() const
+uint32_t SkuPrice::GetAmount() const
 {
     return internal_.amount;
 }
@@ -772,12 +772,12 @@ Snowflake UserAchievement::GetAchievementId() const
     return internal_.achievement_id;
 }
 
-void UserAchievement::SetPercentComplete(std::uint8_t percentComplete)
+void UserAchievement::SetPercentComplete(uint8_t percentComplete)
 {
     internal_.percent_complete = percentComplete;
 }
 
-std::uint8_t UserAchievement::GetPercentComplete() const
+uint8_t UserAchievement::GetPercentComplete() const
 {
     return internal_.percent_complete;
 }
@@ -805,7 +805,7 @@ Result LobbyTransaction::SetOwner(UserId ownerId)
     return static_cast<Result>(result);
 }
 
-Result LobbyTransaction::SetCapacity(std::uint32_t capacity)
+Result LobbyTransaction::SetCapacity(uint32_t capacity)
 {
     auto result = internal_->set_capacity(internal_, capacity);
     return static_cast<Result>(result);
@@ -865,7 +865,7 @@ Result LobbySearchQuery::Sort(MetadataKey key, LobbySearchCast cast, MetadataVal
     return static_cast<Result>(result);
 }
 
-Result LobbySearchQuery::Limit(std::uint32_t limit)
+Result LobbySearchQuery::Limit(uint32_t limit)
 {
     auto result = internal_->limit(internal_, limit);
     return static_cast<Result>(result);

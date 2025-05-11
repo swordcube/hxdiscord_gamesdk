@@ -11,7 +11,7 @@
 
 namespace discord {
 
-Result Core::Create(ClientId clientId, std::uint64_t flags, Core** instance)
+Result Core::Create(ClientId clientId, uint64_t flags, Core** instance)
 {
     if (!instance) {
         return Result::InternalError;
@@ -40,6 +40,14 @@ Result Core::Create(ClientId clientId, std::uint64_t flags, Core** instance)
     }
 
     return static_cast<Result>(result);
+}
+
+void Core::Shutdown()
+{
+    if (internal_) {
+        internal_->destroy(internal_);
+        internal_ = nullptr;
+    }
 }
 
 Core::~Core()

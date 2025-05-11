@@ -34,6 +34,10 @@ class GameSDK {
 		return NativeGameSDK.create(Int64Helper.parseString(clientId), flags);
 	}
 
+	public static function shutdown():Void {
+		NativeGameSDK.shutdown();
+	}
+
 	public static function runCallbacks():Result {
 		return NativeGameSDK.runCallbacks();
 	}
@@ -103,6 +107,58 @@ enum abstract Result(Int) from Int to Int {
 	var PurchaseError                   = 42;
 	var TransactionAborted              = 43;
 	var DrawingInitFailed               = 44;
+
+	@:to
+	public function toString():String {
+		switch(this) {
+			case Ok: return 'Ok';
+			case ServiceUnavailable: return 'ServiceUnavailable';
+			case InvalidVersion: return 'InvalidVersion';
+			case LockFailed: return 'LockFailed';
+			case InternalError: return 'InternalError';
+			case InvalidPayload: return 'InvalidPayload';
+			case InvalidCommand: return 'InvalidCommand';
+			case InvalidPermissions: return 'InvalidPermissions';
+			case NotFetched: return 'NotFetched';
+			case NotFound: return 'NotFound';
+			case Conflict: return 'Conflict';
+			case InvalidSecret: return 'InvalidSecret';
+			case InvalidJoinSecret: return 'InvalidJoinSecret';
+			case NoEligibleActivity: return 'NoEligibleActivity';
+			case InvalidInvite: return 'InvalidInvite';
+			case NotAuthenticated: return 'NotAuthenticated';
+			case InvalidAccessToken: return 'InvalidAccessToken';
+			case ApplicationMismatch: return 'ApplicationMismatch';
+			case InvalidDataUrl: return 'InvalidDataUrl';
+			case InvalidBase64: return 'InvalidBase64';
+			case NotFiltered: return 'NotFiltered';
+			case LobbyFull: return 'LobbyFull';
+			case InvalidLobbySecret: return 'InvalidLobbySecret';
+			case InvalidFilename: return 'InvalidFilename';
+			case InvalidFileSize: return 'InvalidFileSize';
+			case InvalidEntitlement: return 'InvalidEntitlement';
+			case NotInstalled: return 'NotInstalled';
+			case NotRunning: return 'NotRunning';
+			case InsufficientBuffer: return 'InsufficientBuffer';
+			case PurchaseCanceled: return 'PurchaseCanceled';
+			case InvalidGuild: return 'InvalidGuild';
+			case InvalidEvent: return 'InvalidEvent';
+			case InvalidChannel: return 'InvalidChannel';
+			case InvalidOrigin: return 'InvalidOrigin';
+			case RateLimited: return 'RateLimited';
+			case OAuth2Error: return 'OAuth2Error';
+			case SelectChannelTimeout: return 'SelectChannelTimeout';
+			case GetGuildTimeout: return 'GetGuildTimeout';
+			case SelectVoiceForceRequired: return 'SelectVoiceForceRequired';
+			case CaptureShortcutAlreadyListening: return 'CaptureShortcutAlreadyListening';
+			case UnauthorizedForAchievement: return 'UnauthorizedForAchievement';
+			case InvalidGiftCode: return 'InvalidGiftCode';
+			case PurchaseError: return 'PurchaseError';
+			case TransactionAborted: return 'TransactionAborted';
+			case DrawingInitFailed: return 'DrawingInitFailed';
+			default: return 'Unknown';
+		}
+	}
 }
 
 enum abstract CreateFlags(Int) from Int to Int {
@@ -181,6 +237,9 @@ private extern class CppGameSDK {
 	@:native('discord_core::create')
 	public static function create(clientId:Int64, flags:Int64):Result;
 
+	@:native('discord_core::shutdown')
+	public static function shutdown():Void;
+
 	@:native('discord_core::runCallbacks')
 	public static function runCallbacks():Result;
 
@@ -205,6 +264,9 @@ private class HlGameSDK {
 	public static function create(clientId:Int64, flags:Int64):Result {
 		return 0;
 	}
+
+	@:hlNative('discord', 'shutdown')
+	public static function shutdown():Void {}
 
 	@:hlNative('discord', 'runCallbacks')
 	public static function runCallbacks():Result {
