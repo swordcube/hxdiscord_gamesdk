@@ -4,11 +4,14 @@
 		<set name="DLL_FOLDER" value="x86" if="32bit"/>
 
 		<dependency path="project/lib/windows/${DLL_FOLDER}/discord_game_sdk.dll" rename="discord_game_sdk.dll"/>
+		<copyFile name="discord_game_sdk.dll" from="project/lib/windows/${DLL_FOLDER}/discord_game_sdk.dll" toolId="exe" overwrite="true" />
 	</section>
 	<section if="linux">
 		<dependency path="project/lib/linux/discord_game_sdk.so" rename="discord_game_sdk.so"/>
+		<copyFile name="discord_game_sdk.so" from="project/lib/linux/discord_game_sdk.so" overwrite="true" />
 	</section>
 	<section if="mac">
-		<dependency path="project/lib/mac/discord_game_sdk.dylib" rename="discord_game_sdk.dylib"/>
+		<dependency path="project/lib/mac/discord_game_sdk.dylib" rename="../MacOS/discord_game_sdk.dylib"/>
+		<copyFile name="../MacOS/discord_game_sdk.dylib" from="project/lib/mac/discord_game_sdk.dylib" overwrite="true" />
 	</section>
 </extension>
