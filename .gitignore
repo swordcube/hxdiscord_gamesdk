@@ -1,6 +1,5 @@
-.vscode/*
-.vs/*
+.vscode/
+.vs/
 
-hdll-old/*
-
-test/*
+hdll-old/
+test/
