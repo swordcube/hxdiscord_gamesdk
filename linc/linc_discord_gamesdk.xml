@@ -24,19 +24,24 @@
 	<target id="haxe">
 		<section if="windows">
 			<section if="HXCPP_M32">
-				<libpathflag value="-L{LINC_DISCORD_GAMESDK_PATH}/project/lib/x86"/>
-				<lib name="${LINC_DISCORD_GAMESDK_PATH}/project/lib/x86/discord_game_sdk.dll.lib"/>
+				<libpathflag value="-L{LINC_DISCORD_GAMESDK_PATH}/project/lib/windows/x86"/>
+				<lib name="${LINC_DISCORD_GAMESDK_PATH}/project/lib/windows/x86/discord_game_sdk.dll.lib"/>
 			</section>
-
 			<section if="HXCPP_M64">
-				<libpathflag value="-L{LINC_DISCORD_GAMESDK_PATH}/project/lib/x86_64"/>
-				<lib name="${LINC_DISCORD_GAMESDK_PATH}/project/lib/x86_64/discord_game_sdk.dll.lib"/>
+				<libpathflag value="-L{LINC_DISCORD_GAMESDK_PATH}/project/lib/windows/x86_64"/>
+				<lib name="${LINC_DISCORD_GAMESDK_PATH}/project/lib/windows/x86_64/discord_game_sdk.dll.lib"/>
 			</section>
 		</section>
 		<section if="linux">
 			<section if="HXCPP_M64">
-				<libpathflag value="-L{LINC_DISCORD_GAMESDK_PATH}/project/lib/x86_64"/>
-				<lib name="${LINC_DISCORD_GAMESDK_PATH}/project/lib/x86_64/discord_game_sdk.so"/>
+				<libpathflag value="-L{LINC_DISCORD_GAMESDK_PATH}/project/lib/linux"/>
+				<lib name="${LINC_DISCORD_GAMESDK_PATH}/project/lib/linux/discord_game_sdk.so"/>
+			</section>
+		</section>
+		<section if="mac">
+			<section if="HXCPP_M64">
+				<libpathflag value="-L{LINC_DISCORD_GAMESDK_PATH}/project/lib/mac"/>
+				<lib name="${LINC_DISCORD_GAMESDK_PATH}/project/lib/mac/discord_game_sdk.dylib"/>
 			</section>
 		</section>
 	</target>
