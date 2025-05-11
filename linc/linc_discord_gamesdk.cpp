@@ -10,7 +10,7 @@ result discord_core::create(int64_t clientId, uint64_t flags) {
 }
 
 void discord_core::shutdown() {
-	discord::Core::Shutdown();
+	core->Shutdown();
 }
 
 result discord_core::runCallbacks() {

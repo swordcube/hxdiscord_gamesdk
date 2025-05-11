@@ -19,7 +19,7 @@ namespace discord {
 class Core final {
 public:
     static Result Create(ClientId clientId, uint64_t flags, Core** instance);
-    static void Shutdown();
+    void Shutdown();
 
     ~Core();
 
