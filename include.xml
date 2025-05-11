@@ -6,9 +6,9 @@
 		<dependency path="project/lib/windows/${DLL_FOLDER}/discord_game_sdk.dll" rename="discord_game_sdk.dll"/>
 	</section>
 	<section if="linux">
-		<dependency path="project/lib/linux/discord_game_sdk.so" rename="libdiscord_game_sdk.so"/>
+		<dependency path="project/lib/linux/discord_game_sdk.so" rename="discord_game_sdk.so"/>
 	</section>
 	<section if="mac">
-		<dependency path="project/lib/mac/discord_game_sdk.dylib" rename="libdiscord_game_sdk.dylib"/>
+		<dependency path="project/lib/mac/discord_game_sdk.dylib" rename="discord_game_sdk.dylib"/>
 	</section>
 </extension>
